@@ -1,0 +1,43 @@
+#Sort {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.bar {
+    margin: 0 2px;
+    background-color: rgb(255, 119, 0);
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    transition: height 0.5s, background-color 0.5s;
+}
+.bg{
+    background-color: #000000;
+}
+.tab{
+        background-color: #3498db; 
+        border: none;
+        border-radius: 12px;
+        color: white;
+        padding: 15px 30px; 
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px; 
+        font-family: 'Arial', sans-serif; 
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        transition: all 0.3s ease;
+    }
+
+    .tab:hover {
+        background-color: #2980b9;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .tab:active {
+        background-color: #1c5985;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transform: translateY(2px);
+    }
