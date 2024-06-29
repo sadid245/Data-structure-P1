@@ -10,10 +10,18 @@
     text-align: center;
     color: #ffffff;
     font-size: 14px;
+    
     transition: height 0.5s, background-color 0.5s;
 }
+
 .bg{
     background-color: #000000;
+}
+.bar.highlight {
+    background-color: rgb(238, 231, 217);
+}
+.bar.sorted {
+    background-color: green;
 }
 .tab{
         background-color: #3498db; 
