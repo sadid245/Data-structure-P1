@@ -85,11 +85,34 @@ async function quicksort(arr) {
            return result;
 }
 
+async function selectionSort(arr) {
+    const length = arr.length;
+
+    for (let i = 0; i < length; i++) {
+        let minIndex = i;
+
+        for (let j = i + 1; j < length; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+
+        if (minIndex !== i) {
+            [arr[i], arr[minIndex]] = [arr[minIndex], arr[i]];
+        }
+
+        await updateArray([...arr]);
+    }
+
+    return arr;
+}
+
 async function updateArray(sortedArr) {
     array = sortedArr;
     displayArray();
     await new Promise(resolve => setTimeout(resolve, 1000));
 }
+
 function startQuickSort() {
 
     quicksort(array).then(sortedArray => {
@@ -100,6 +123,13 @@ function startQuickSort() {
 
 function startMergeSort() {
     mergeSort(array).then(sortedArray => {
+        array = sortedArray;
+        displayArray();
+    });
+}
+
+function startSelectionSort() {
+    selectionSort(array).then(sortedArray => {
         array = sortedArray;
         displayArray();
     });
